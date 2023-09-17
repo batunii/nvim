@@ -1,1 +1,12 @@
-neofetch
+.gsd-keyboard.settings-ported
+dconf/
+evolution/
+gnome-initial-setup-done
+gtk-3.0/
+ibus/
+pop-shell/
+pop-system-updater/
+pulse/
+touchegg/
+user-dirs.dirs
+user-dirs.locale
