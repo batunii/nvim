@@ -60,7 +60,12 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
-  use 'mfussenegger/nvim-jdtls'
+  use "mfussenegger/nvim-jdtls"
+
+  --colorscheme
+  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "lunarvim/darkplus.nvim"
+
 -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'

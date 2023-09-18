@@ -31,7 +31,6 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
-vim.opt.wrap = false                             -- wrapping the line 
 vim.opt.linebreak = true                             -- wrap doesnt break the words
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 
