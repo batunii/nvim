@@ -65,6 +65,7 @@ return packer.startup(function(use)
   --colorscheme
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
+  use "rose-pine/neovim"
 
 -- Telescope
   use "nvim-telescope/telescope.nvim"
