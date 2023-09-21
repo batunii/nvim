@@ -67,6 +67,16 @@ return packer.startup(function(use)
   use "lunarvim/darkplus.nvim"
   use "rose-pine/neovim"
 
+  -- TreeSitter
+      use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
+
+    use('tpope/vim-fugitive')
 -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
