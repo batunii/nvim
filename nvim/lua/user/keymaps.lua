@@ -1,4 +1,4 @@
-local opts = { noremap = true, silent = true }
+local opts = { noremap = true, silent = false }
 
 local term_opts = { silent = true }
 
@@ -38,9 +38,9 @@ keymap("n", "<C-h>", ":vertical resize +2<CR>", opts)
 -- keymaps for lua functions
 keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+keymap("n", "gH", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-keymap("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+keymap("n", "gS", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts) 
 keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
 -- Navigate buffers

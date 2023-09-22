@@ -77,6 +77,10 @@ return packer.startup(function(use)
     }
 
     use('tpope/vim-fugitive')
+
+--Icons
+use 'nvim-tree/nvim-web-devicons'
+
 -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
