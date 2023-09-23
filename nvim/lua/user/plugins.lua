@@ -78,6 +78,7 @@ return packer.startup(function(use)
 
     use('tpope/vim-fugitive')
 
+
 --Icons
 use 'nvim-tree/nvim-web-devicons'
 
