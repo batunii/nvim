@@ -61,7 +61,7 @@ return packer.startup(function(use)
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
   use "mfussenegger/nvim-jdtls"
-
+  use "simrat39/rust-tools.nvim" -- Rust plugin
   --colorscheme
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
