@@ -1,10 +1,2 @@
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.cmp"
-require "user.lsp"
-require "user.telescope"
-require "user.colorscheme"
-require "user.treesitter"
-require "user.fugitive"
-vim.cmd "colorscheme rose-pine-main"
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
