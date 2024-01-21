@@ -1,4 +1,5 @@
 local keymap = vim.api.nvim_set_keymap
+local wk = require("which-key")
 local opts = { noremap = true, silent = false }
 --keymap("", "<Space>", "<Nop>", opts)
 -- Better window navigation
@@ -35,17 +36,20 @@ keymap("x", "J", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-Down>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-Up>", ":move '<-2<CR>gv-gv", opts)
 
+-- Neo Tree Mapping for open_vsplit with s
 require("neo-tree").setup({
   window = {
     mappings = {
-      ["v"] = "open_vsplit",
-      ["i"] = {
-        function(state)
-          local node = state.tree:get_node()
-          print(node.path)
-        end,
-        desc = "print path",
+      ["v"] = {
+        "open_vsplit",
+        desc = "Open in Vertical",
       },
     },
   },
 })
+wk.register({
+  --["g"] = { name = "get" },
+  ["gS"] = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature Help" },
+  ["gi"] = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "GoTo implementation" },
+})
+--keymap("n", "gS", "<cmd>lua vim.lsp.buf.signature_help()", opts)
