@@ -17,8 +17,8 @@ keymap("n", "<S-Left>", ":bprevious<CR>", opts)
 -- Resize with arrows
 keymap("n", "<C-j>", ":resize +2<CR>", opts)
 keymap("n", "<C-k>", ":resize -2<CR>", opts)
-keymap("n", "<C-l>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-h>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-l>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-h>", ":vertical resize -2<CR>", opts)
 
 -- Visual Mode
 -- Indent the line
@@ -38,6 +38,13 @@ keymap("x", "<A-Up>", ":move '<-2<CR>gv-gv", opts)
 
 -- Neo Tree Mapping for open_vsplit with s
 require("neo-tree").setup({
+  filesystem = {
+    filtered_items = {
+      visible = true, --  unhiding the dot files
+      hide_dotfiles = false,
+      hide_gitignored = true,
+    },
+  },
   window = {
     mappings = {
       ["v"] = {
@@ -47,9 +54,15 @@ require("neo-tree").setup({
     },
   },
 })
+
+-- Lsp mappings
 wk.register({
   --["g"] = { name = "get" },
   ["gS"] = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature Help" },
   ["gi"] = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "GoTo implementation" },
 })
---keymap("n", "gS", "<cmd>lua vim.lsp.buf.signature_help()", opts)
+
+--Telescope mappings
+wk.register({
+  ["<leader>fs"] = { require("telescope.builtin").live_grep, "Live Grep" },
+})
