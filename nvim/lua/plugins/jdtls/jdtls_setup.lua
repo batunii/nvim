@@ -135,12 +135,12 @@ function M.setup()
       },
       signatureHelp = { enabled = true },
       contentProvider = { preferred = "fernflower" },
-      -- eclipse = {
-      -- 	downloadSources = true,
-      -- },
-      -- implementationsCodeLens = {
-      -- 	enabled = true,
-      -- },
+       eclipse = {
+      	downloadSources = true,
+       },
+      implementationsCodeLens = {
+       	enabled = true,
+       },
       completion = {
         favoriteStaticMembers = {
           "org.hamcrest.MatcherAssert.assertThat",
