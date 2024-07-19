@@ -56,13 +56,13 @@ require("neo-tree").setup({
 })
 
 -- Lsp mappings
-wk.register({
+wk.add({
   --["g"] = { name = "get" },
-  ["gS"] = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature Help" },
-  ["gi"] = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "GoTo implementation" },
+  { "gS", "<cmd>lua vim.lsp.buf.signature_help()<CR>", desc = "Signature Help" },
+  { "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", desc = "GoTo implementation" },
 })
 
 --Telescope mappings
-wk.register({
-  ["<leader>fs"] = { require("telescope.builtin").live_grep, "Live Grep" },
+wk.add({
+  { "<leader>fs", require("telescope.builtin").live_grep, desc = "Live Grep" },
 })
